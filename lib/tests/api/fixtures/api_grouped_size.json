@@ -1,0 +1,22 @@
+{
+    "$hsil-simulation-configuration-version": 2,
+    "communication": {
+        "domain": 0,
+        "topics": [
+            {
+                "name": "SizeTopic",
+                "qos": { "priority": "normal", "reliability": "fast", "queueLength": 1 },
+                "published": [
+                    {
+                        "id": 10,
+                        "signals": [
+                            { "accessPoint": "sig.c", "offset": 8, "type": "uint32" },
+                            { "accessPoint": "sig.a", "offset": 0, "type": "float64" },
+                            { "accessPoint": "sig.b", "offset": 4, "type": "uint8"  }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

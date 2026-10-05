@@ -1,0 +1,14 @@
+@PACKAGE_INIT@
+
+include(CMakeFindDependencyMacro)
+
+find_dependency(Threads)
+
+# Vendor selected at build time
+set(HSIL_DDS_VENDOR "@HSIL_DDS_VENDOR@")
+
+if(HSIL_DDS_VENDOR STREQUAL "cycloneDDS")
+    find_dependency(CycloneDDS)
+endif()
+
+include("${CMAKE_CURRENT_LIST_DIR}/HsilCoSimTargets.cmake")

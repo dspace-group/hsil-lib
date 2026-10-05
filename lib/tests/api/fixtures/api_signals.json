@@ -1,0 +1,23 @@
+{
+    "$hsil-simulation-configuration-version": 2,
+    "communication": {
+        "domain": 0,
+        "topics": [
+            {
+                "name": "VehicleSignals",
+                "qos": { "priority": "normal", "reliability": "fast", "queueLength": 1 },
+                "published": [
+                    {
+                        "id": 1,
+                        "signals": [
+                            { "accessPoint": "vehicle.speed",       "offset": 0,  "type": "float32"            },
+                            { "accessPoint": "vehicle.rpm",         "offset": 4,  "type": "float32"            },
+                            { "accessPoint": "vehicle.gearPos",     "offset": 8,  "type": "int32"              },
+                            { "accessPoint": "vehicle.wheelSpeeds", "offset": 12, "type": "float32", "count": 4 }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

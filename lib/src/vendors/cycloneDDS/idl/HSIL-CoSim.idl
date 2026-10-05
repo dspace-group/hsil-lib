@@ -1,0 +1,32 @@
+/*******************************************************************************
+ *                                                                             *
+ *        Hybrid Simulation Integration Layer CoSim interface V.3.0            *
+ *                                                                             *
+ ******************************************************************************/
+
+module HSIL_CoSim
+{
+    /**
+     *  Grouped Signal Data 
+     *  ===================
+     */
+    struct GroupedData
+    {
+        @key unsigned long id;        /* Data Group identifier               */
+        unsigned long sequenceNumber; /* application-level sequence number   */
+        unsigned long long timestamp; /* simulation timestamp in nanoseconds */
+        sequence<octet> data;         /* serialized data                     */
+    };
+ 
+    /**
+     *  Generic Stream and Bus Data
+     *  ===========================
+     */
+    struct StreamingData
+    {
+        @key char protocol[8];        /* protocol followed by meta and data  */
+        unsigned long long timestamp; /* simulation timestamp in nanoseconds */
+        sequence<octet> meta;         /* meta information (e.g., for CAN)    */
+        sequence<octet> data;         /* serialized data                     */
+    };
+};

@@ -1,0 +1,6 @@
+{
+    "$hsil-simulation-configuration-version": 2,
+    "communication": {
+        "topics": []
+    }
+}

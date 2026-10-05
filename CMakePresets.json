@@ -1,0 +1,260 @@
+{
+  "version": 3,
+
+  "configurePresets": [
+    {
+        "name": "base-ci-dirs",
+        "hidden": true,
+        "binaryDir": "${sourceDir}/ci_build/${presetName}",
+        "installDir": "${sourceDir}/ci_install/${presetName}"
+    },
+
+    {
+      "name": "base-ci-debug",
+      "hidden": true,
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+
+    {
+      "name": "base-ci-release",
+      "hidden": true,
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    },
+
+    {
+      "name": "base-testing",
+      "hidden": true,
+      "cacheVariables": {
+        "HSIL_BUILD_TESTING": "ON"
+      }
+    },
+
+    {
+      "name": "base-ci-linux",
+      "hidden": true,
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Linux"
+      }
+    },
+
+    {
+      "name": "base-ci-windows",
+      "hidden": true,
+      "condition": {
+        "type": "equals",
+        "lhs": "${hostSystemName}",
+        "rhs": "Windows"
+      }
+    },
+
+    {
+      "name": "dev",
+      "inherits": ["base-testing"],
+      "binaryDir": "${sourceDir}/build",
+      "installDir": "${sourceDir}/install",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug"
+      }
+    },
+
+    {
+      "name": "ci-linux-gcc-release",
+      "inherits": ["base-ci-dirs", "base-ci-release", "base-ci-linux", "base-testing"],
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "gcc",
+        "CMAKE_CXX_COMPILER": "g++"
+      }
+    },
+
+    {
+      "name": "ci-linux-gcc-static-release",
+      "inherits": ["base-ci-dirs", "base-ci-release", "base-ci-linux", "base-testing"],
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "gcc",
+        "CMAKE_CXX_COMPILER": "g++",
+        "HSIL_BUILD_STATIC_LIB": "ON"
+      }
+    },
+    
+    {
+      "name": "ci-linux-clang-release",
+      "inherits": ["base-ci-dirs", "base-ci-release", "base-ci-linux", "base-testing"],
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_CXX_COMPILER": "clang++"
+      }
+    },
+
+    {
+      "name": "ci-linux-clang-debug",
+      "inherits": ["base-ci-dirs", "base-ci-debug", "base-ci-linux", "base-testing"],
+      "cacheVariables": {
+        "CMAKE_C_COMPILER": "clang",
+        "CMAKE_CXX_COMPILER": "clang++"
+      }
+    },
+
+    {
+      "name": "ci-windows-msvc-debug",
+      "inherits": ["base-ci-dirs", "base-ci-debug", "base-ci-windows", "base-testing"]
+    },
+
+    {
+      "name": "ci-windows-msvc-release",
+      "inherits": ["base-ci-dirs", "base-ci-release", "base-ci-windows", "base-testing"]
+    },
+
+    {
+      "name": "ci-windows-x86-msvc-release",
+      "inherits": ["base-ci-dirs", "base-ci-release", "base-ci-windows", "base-testing"],
+      "architecture": {
+        "value": "Win32"
+      }
+    },
+
+    {
+      "name": "ci-windows-msvc-static-release",
+      "inherits": ["base-ci-dirs", "base-ci-release", "base-ci-windows", "base-testing"],
+      "cacheVariables": {
+        "HSIL_BUILD_STATIC_LIB": "ON"
+      }
+    }
+  ],
+
+  "buildPresets": [
+    {
+      "name": "dev",
+      "configurePreset": "dev",
+      "configuration": "Debug"
+    },
+
+    {
+      "name": "ci-linux-gcc-release",
+      "configurePreset": "ci-linux-gcc-release"
+    },
+
+    {
+      "name": "ci-linux-clang-release",
+      "configurePreset": "ci-linux-clang-release"
+    },
+
+    {
+      "name": "ci-linux-clang-debug",
+      "configurePreset": "ci-linux-clang-debug"
+    },
+
+    {
+      "name": "ci-windows-msvc-debug",
+      "configurePreset": "ci-windows-msvc-debug",
+      "configuration": "Debug"
+    },
+
+    {
+      "name": "ci-windows-msvc-release",
+      "configurePreset": "ci-windows-msvc-release",
+      "configuration": "Release"
+    },
+
+    {
+      "name": "ci-windows-x86-msvc-release",
+      "configurePreset": "ci-windows-x86-msvc-release",
+      "configuration": "Release"
+    },
+
+    {
+      "name": "ci-linux-gcc-static-release",
+      "configurePreset": "ci-linux-gcc-static-release"
+    },
+
+    {
+      "name": "ci-windows-msvc-static-release",
+      "configurePreset": "ci-windows-msvc-static-release",
+      "configuration": "Release"
+    }
+  ],
+
+  "testPresets": [
+    {
+      "name": "dev",
+      "configurePreset": "dev",
+      "configuration": "Debug",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+
+    {
+      "name": "ci-linux-gcc-release",
+      "configurePreset": "ci-linux-gcc-release",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+
+    {
+      "name": "ci-linux-clang-release",
+      "configurePreset": "ci-linux-clang-release",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+
+    {
+      "name": "ci-linux-clang-debug",
+      "configurePreset": "ci-linux-clang-debug",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+
+    {
+      "name": "ci-windows-msvc-debug",
+      "configurePreset": "ci-windows-msvc-debug",
+      "configuration": "Debug",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+
+    {
+      "name": "ci-windows-msvc-release",
+      "configurePreset": "ci-windows-msvc-release",
+      "configuration": "Release",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+
+    {
+      "name": "ci-windows-x86-msvc-release",
+      "configurePreset": "ci-windows-x86-msvc-release",
+      "configuration": "Release",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+
+    {
+      "name": "ci-linux-gcc-static-release",
+      "configurePreset": "ci-linux-gcc-static-release",
+      "output": {
+        "outputOnFailure": true
+      }
+    },
+
+    {
+      "name": "ci-windows-msvc-static-release",
+      "configurePreset": "ci-windows-msvc-static-release",
+      "configuration": "Release",
+      "output": {
+        "outputOnFailure": true
+      }
+    }
+  ]
+}

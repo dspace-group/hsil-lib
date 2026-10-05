@@ -1,0 +1,80 @@
+name: Build & Test
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  build-and-test:
+    name: ${{ matrix.name }}
+    runs-on: ${{ matrix.runner }}
+    timeout-minutes: 15
+
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Linux x86_64 GCC Release
+            runner: ubuntu-24.04
+            preset: ci-linux-gcc-release
+            build_type: Release
+
+          - name: Linux x86_64 GCC Static Release
+            runner: ubuntu-24.04
+            preset: ci-linux-gcc-static-release
+            build_type: Release
+
+          - name: Linux x86_64 Clang Release
+            runner: ubuntu-24.04
+            preset: ci-linux-clang-release
+            build_type: Release
+
+          - name: Linux aarch64 GCC Release
+            runner: ubuntu-24.04-arm
+            preset: ci-linux-gcc-release
+            build_type: Release
+
+          - name: Linux aarch64 Clang Release
+            runner: ubuntu-24.04-arm
+            preset: ci-linux-clang-release
+            build_type: Release
+
+          - name: Windows x86_64 MSVC Release
+            runner: windows-latest
+            preset: ci-windows-msvc-release
+            build_type: Release
+
+          - name: Windows x86_64 MSVC Static Release
+            runner: windows-latest
+            preset: ci-windows-msvc-static-release
+            build_type: Release
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Configure
+        run: cmake --preset ${{ matrix.preset }}
+
+      - name: Build
+        run: cmake --build --preset ${{ matrix.preset }}
+
+      - name: Unit Test
+        run: ctest --preset ${{ matrix.preset }}
+
+      - name: Install HsilCoSim (Staging)
+        run: cmake --install ci_build/${{ matrix.preset }} --config ${{ matrix.build_type }} --prefix ci_install/${{ matrix.preset }}
+
+      - name: Integration Test - Subproject Consumer
+        run: |
+          cmake -S lib/tests/integration/subproject_consumer -B ci_build/test_subproject_${{ matrix.preset }} -DCMAKE_BUILD_TYPE=${{ matrix.build_type }}
+          cmake --build ci_build/test_subproject_${{ matrix.preset }} --config ${{ matrix.build_type }}
+          ctest --test-dir ci_build/test_subproject_${{ matrix.preset }} --output-on-failure -C ${{ matrix.build_type }}
+
+      - name: Integration Test - Installed Package Consumer
+        run: |
+          cmake -S lib/tests/integration/installed_consumer -B ci_build/test_installed_${{ matrix.preset }} -DCMAKE_BUILD_TYPE=${{ matrix.build_type }} -DCMAKE_PREFIX_PATH="${{ github.workspace }}/ci_install/${{ matrix.preset }}"
+          cmake --build ci_build/test_installed_${{ matrix.preset }} --config ${{ matrix.build_type }}
+          ctest --test-dir ci_build/test_installed_${{ matrix.preset }} --output-on-failure -C ${{ matrix.build_type }}

@@ -1,0 +1,20 @@
+{
+    "$hsil-simulation-configuration-version": 2,
+    "communication": {
+        "domain": 42,
+        "topics": [
+            {
+                "name": "BatterySignals",
+                "qos": { "priority": "high", "reliability": "fast" },
+                "published": [
+                    {
+                        "id": 1,
+                        "signals": [
+                            { "accessPoint": "battery.cell_temps", "offset": 0, "type": "float32", "count": 4 }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

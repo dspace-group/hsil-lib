@@ -1,0 +1,13 @@
+{
+    "$hsil-simulation-configuration-version": 2,
+    "communication": {
+        "domain": 42,
+        "topics": [
+            {
+                "name": "BmsCan",
+                "qos": { "priority": "high", "reliability": "reliable", "queueLength": 256 },
+                "subscribed": [ { "protocol": "CAN_v1", "accessPoint": "can.cooling_cmd" } ]
+            }
+        ]
+    }
+}

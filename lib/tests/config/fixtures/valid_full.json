@@ -1,0 +1,28 @@
+{
+    "$hsil-simulation-configuration-version": 2,
+    "communication": {
+        "domain": 42,
+        "topics": [
+            {
+                "name": "VehicleSignals",
+                "qos": { "priority": "high", "reliability": "reliable", "queueLength": 64 },
+                "published": [
+                    {
+                        "id": 1,
+                        "signals": [
+                            { "accessPoint": "vehicle.speed",   "offset": 0, "type": "float32" },
+                            { "accessPoint": "vehicle.rpm",     "offset": 4, "type": "float32" },
+                            { "accessPoint": "vehicle.gearPos", "offset": 8, "type": "int32" }
+                        ]
+                    }
+                ]
+            },
+            {
+                "name": "CanBus0",
+                "qos": { "priority": "normal", "reliability": "fast" },
+                "subscribed": [ { "protocol": "CAN_v1", "accessPoint": "can0.rx" } ],
+                "published":  [ { "protocol": "CAN_v1", "accessPoint": "can0.tx" } ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "$hsil-simulation-configuration-version": 2,
+    "communication": {
+        "domain": 42,
+        "topics": [
+            {
+                "name": "BatterySignals",
+                "qos": { "priority": "high", "reliability": "fast" },
+                "subscribed": [
+                    { "id": 1, "signals": [ { "accessPoint": "battery.cell_temps", "offset": 0, "type": "float32", "count": 4 } ] }
+                ]
+            },
+            {
+                "name": "BmsCan",
+                "qos": { "priority": "high", "reliability": "reliable", "queueLength": 256 },
+                "published": [ { "protocol": "CAN_v1", "accessPoint": "can.cooling_cmd" } ]
+            }
+        ]
+    }
+}
