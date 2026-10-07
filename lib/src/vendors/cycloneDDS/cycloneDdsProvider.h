@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 dSPACE SE & Co. KG
+// SPDX-License-Identifier: Apache-2.0
+
 /** <!-------------------------------------------------------------------------->
 *
 *   @file cycloneDdsProvider.h
@@ -10,9 +13,6 @@
 *   @description
 *       Declares hsil_getDdsOps() for the CycloneDDS backend. This header is
 *       only included internally; consumers of the HSIL library use hsil.h.
-*
-*   @copyright
-*       Copyright 2026, dSPACE SE & Co. KG. All rights reserved.
 *
 *   <hr><br>
 *<!-------------------------------------------------------------------------->*/

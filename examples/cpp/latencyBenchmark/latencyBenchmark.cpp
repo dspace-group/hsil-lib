@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 dSPACE SE & Co. KG
+// SPDX-License-Identifier: Apache-2.0
+
 /** <!-------------------------------------------------------------------------->
 *
 *   @file latencyBenchmark.cpp
@@ -40,9 +43,6 @@
 *       -------------------
 *       After all round trips the Pinger prints per-sample RTT samples and a
 *       summary: min, max, mean, median and std-dev latency.
-*
-*   @copyright
-*       Copyright 2026, dSPACE SE & Co. KG. All rights reserved.
 *
 *   <hr><br>
 *<!-------------------------------------------------------------------------->*/

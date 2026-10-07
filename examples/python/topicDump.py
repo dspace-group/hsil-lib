@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2026 dSPACE SE & Co. KG
+# SPDX-License-Identifier: Apache-2.0
+
 """ <!-------------------------------------------------------------------------->
 
    @file topicDump.py
@@ -16,9 +19,6 @@
 
        Usage:
            python topicDump.py --type grouped|streaming [--domain <id>] <topicName>
-
-   @copyright
-       Copyright 2026, dSPACE SE & Co. KG. All rights reserved.
 
    <hr><br>
 <!-------------------------------------------------------------------------->"""

@@ -1,7 +1,21 @@
-/**
- * @file main.c
- * @brief Integration test verifying consumption of HsilCoSim via add_subdirectory().
- */
+// SPDX-FileCopyrightText: 2026 dSPACE SE & Co. KG
+// SPDX-License-Identifier: Apache-2.0
+
+/** <!-------------------------------------------------------------------------->
+*
+*   @file main.c
+*
+*   @brief Subproject-consumer integration test for HsilCoSim.
+*
+*   @author
+*       dSPACE SE & Co. KG
+*
+*   @description
+*       Verifies that an application can consume HsilCoSim through
+*       add_subdirectory() and initialize a session.
+*
+*   <hr><br>
+*<!-------------------------------------------------------------------------->*/
 
 #include <hsil/hsil.h>
 #include <stdio.h>

@@ -31,7 +31,7 @@ third_party/
   googletest/               ← git submodule
   nlohmann_json/            ← git submodule
 examples/cpp/               ← C++ usage examples
-SKILL.md                    ← C++ coding conventions for this project (read before writing code)
+docs/developer/codingConventions.md ← SPDX and source-header conventions
 ```
 
 ---
@@ -86,7 +86,34 @@ The shared library uses `CXX_VISIBILITY_PRESET hidden` / `C_VISIBILITY_PRESET hi
 - **C++17 / C11**; 4-space indent; opening braces on their own line
 - `camelCase` for variables/functions/filenames, `PascalCase` for classes, capitalized namespaces
 - Public C APIs must **never throw** — use error codes (`HSIL_ERR_*`)
-- Every `.c`/`.cpp` file must start with the standard file header comment block (see SKILL.md for the template)
+- First-party source and build files must start with an SPDX comment block using the file's comment syntax.
+- C/C++ files retain the Doxygen `@file`, `@brief`, `@author`, and `@description` block after the SPDX lines.
+  Keep copyright and license metadata in the SPDX block, not in Doxygen.
+- Python scripts keep the shebang on line 1, followed by the SPDX comment block and module docstring.
+- CMake files keep `cmake_minimum_required()` as the first command, after the SPDX comments.
+- See `docs/developer/codingConventions.md` for examples.
+
+Example C/C++ file opening:
+
+```cpp
+// SPDX-FileCopyrightText: <Your Copyright>
+// SPDX-License-Identifier: Apache-2.0
+
+/** <!-------------------------------------------------------------------------->
+*
+*   @file <filename>
+*
+*   @brief <short description>
+*
+*   @author
+*       <author name(s)>
+*
+*   @description
+*       <what the file does>
+*
+*   <hr><br>
+*<!-------------------------------------------------------------------------->*/
+```
 - Line length limit: 120 characters
 
 ---

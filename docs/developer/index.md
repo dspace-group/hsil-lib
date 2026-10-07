@@ -6,3 +6,4 @@ This section is dedicated to programmers looking to extend or customize the HSIL
 
 - [Source Layout](layout.md) — Map of the directory hierarchy explaining where headers, internals, and vendor bindings live.
 - [Adding a DDS Vendor](vendor.md) — Implementation blueprint for adding a custom, new DDS transportation layer.
+- [Coding Conventions](codingConventions.md) — SPDX identifiers and source-file header format.

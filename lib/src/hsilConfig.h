@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 dSPACE SE & Co. KG
+// SPDX-License-Identifier: Apache-2.0
+
 /** <!-------------------------------------------------------------------------->
 *
 *   @file hsilConfig.h
@@ -11,9 +14,6 @@
 *       Declares the C++ data structures that mirror the HSIL simulation
 *       configuration JSON schema and exposes parseSimulationConfig() which
 *       reads a configuration file from disk and populates those structures.
-*
-*   @copyright
-*       Copyright 2026, dSPACE SE & Co. KG. All rights reserved.
 *
 *   <hr><br>
 *<!-------------------------------------------------------------------------->*/

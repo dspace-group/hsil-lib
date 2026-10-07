@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 dSPACE SE & Co. KG
+# SPDX-License-Identifier: Apache-2.0
+
 # CMake 3.21 is required for PROJECT_IS_TOP_LEVEL and the
 # $<TARGET_RUNTIME_DLLS:...> generator expression, both of which are used to
 # keep this project well-behaved when it is consumed via add_subdirectory().
@@ -114,10 +117,11 @@ endif()
 # Installation rules
 # ---------------------------------------------------------------------------- #
 
-# Always install hsil_cosim License
+# Always install the hsil_cosim license and notice.
 install(
         FILES
             LICENSE
+            NOTICE
         DESTINATION ${CMAKE_INSTALL_DOCDIR}
     )
 

@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 dSPACE SE & Co. KG
+// SPDX-License-Identifier: Apache-2.0
+
 /** <!-------------------------------------------------------------------------->
 *
 *   @file bmsEcu.cpp
@@ -12,9 +15,6 @@
 *       Subscribes to `BatterySignals` (grouped) and maintains a small local state
 *       with the most recent cell temperatures. Runs a periodic control loop that
 *       publishes a CAN command on `BmsCan` when any cell exceeds a threshold.
-*
-*   @copyright
-*       Copyright 2026, dSPACE SE & Co. KG. All rights reserved.
 *
 *   <hr><br>
 *<!-------------------------------------------------------------------------->*/

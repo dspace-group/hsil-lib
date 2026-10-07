@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 dSPACE SE & Co. KG
+# SPDX-License-Identifier: Apache-2.0
+
 # Internal helper: runtime DLL deployment and RPATH configuration for examples and tests.
 include_guard(GLOBAL)
 

@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 dSPACE SE & Co. KG
+# SPDX-License-Identifier: Apache-2.0
+
 # ---------------------------------------------------------------------------- #
 # Dependencies (git submodules)                                                #
 # ---------------------------------------------------------------------------- #

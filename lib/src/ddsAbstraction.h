@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 dSPACE SE & Co. KG
+// SPDX-License-Identifier: Apache-2.0
+
 /** <!-------------------------------------------------------------------------->
 *
 *   @file ddsAbstraction.h
@@ -12,9 +15,6 @@
 *       backend must implement. The main library interacts with DDS exclusively
 *       through this interface, keeping vendor-specific code isolated in the
 *       src/vendors/ subdirectories.
-*
-*   @copyright
-*       Copyright 2026, dSPACE SE & Co. KG. All rights reserved.
 *
 *   <hr><br>
 *<!-------------------------------------------------------------------------->*/

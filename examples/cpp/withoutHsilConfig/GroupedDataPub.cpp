@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 dSPACE SE & Co. KG
+// SPDX-License-Identifier: Apache-2.0
+
 /** <!-------------------------------------------------------------------------->
 *
 *   @file GroupedDataPub.cpp
@@ -7,8 +10,9 @@
 *   @author
 *       dSPACE SE & Co. KG
 *
-*   @copyright
-*       Copyright 2026, dSPACE SE & Co. KG. All rights reserved.
+*   @description
+*       Creates a publisher and sends GroupedData samples on a configured topic
+*       without using an HSIL JSON configuration file.
 *
 *   <hr><br>
 *<!-------------------------------------------------------------------------->*/

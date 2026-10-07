@@ -1,7 +1,21 @@
-/**
- * @file main.c
- * @brief Integration test verifying consumption of HsilCoSim from the install tree.
- */
+// SPDX-FileCopyrightText: 2026 dSPACE SE & Co. KG
+// SPDX-License-Identifier: Apache-2.0
+
+/** <!-------------------------------------------------------------------------->
+*
+*   @file main.c
+*
+*   @brief Installed-consumer integration test for HsilCoSim.
+*
+*   @author
+*       dSPACE SE & Co. KG
+*
+*   @description
+*       Verifies that an application can consume HsilCoSim from an installed
+*       package and initialize a session.
+*
+*   <hr><br>
+*<!-------------------------------------------------------------------------->*/
 
 #include <hsil/hsil.h>
 #include <stdio.h>

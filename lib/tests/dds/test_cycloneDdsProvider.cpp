@@ -1,12 +1,22 @@
-// -------------------------------------------------------------------------- //
-// Layer 3 – CycloneDDS vendor backend tests (real DDS participant)
-//
-// These tests use the real hsilDdsVendor / CycloneDDS library. No external
-// daemon is needed; CycloneDDS is peer-to-peer and uses loopback UDP.
-//
-// Domain 200 is used throughout to minimise collisions with production
-// agents or other CI jobs running on domain 0.
-// -------------------------------------------------------------------------- //
+// SPDX-FileCopyrightText: 2026 dSPACE SE & Co. KG
+// SPDX-License-Identifier: Apache-2.0
+
+/** <!-------------------------------------------------------------------------->
+*
+*   @file test_cycloneDdsProvider.cpp
+*
+*   @brief Layer 3 CycloneDDS vendor backend tests.
+*
+*   @author
+*       dSPACE SE & Co. KG
+*
+*   @description
+*       Exercises the real HSIL DDS vendor and CycloneDDS library with loopback
+*       participants; no external daemon is needed. Fixed test domains minimize
+*       collisions with production agents and other CI jobs.
+*
+*   <hr><br>
+*<!-------------------------------------------------------------------------->*/
 
 #include <gtest/gtest.h>
 

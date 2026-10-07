@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 dSPACE SE & Co. KG
+// SPDX-License-Identifier: Apache-2.0
+
 /** <!-------------------------------------------------------------------------->
 *
 *   @file hsilConfig.cpp
@@ -12,9 +15,6 @@
 *       populates the HsilSimulationConfig data structure. Uses nlohmann/json
 *       for parsing. All errors are reported to stderr; no exceptions propagate
 *       beyond this translation unit.
-*
-*   @copyright
-*       Copyright 2026, dSPACE SE & Co. KG. All rights reserved.
 *
 *   <hr><br>
 *<!-------------------------------------------------------------------------->*/

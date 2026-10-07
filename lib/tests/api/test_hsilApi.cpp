@@ -1,10 +1,22 @@
-// -------------------------------------------------------------------------- //
-// Layer 2 – HSIL API tests (stub vtable, no live DDS)
-//
-// Tests hsil.cpp logic: argument validation, error propagation, subscriber
-// dispatch, publisher type enforcement, get-or-create semantics, and topic
-// type enforcement.
-// -------------------------------------------------------------------------- //
+// SPDX-FileCopyrightText: 2026 dSPACE SE & Co. KG
+// SPDX-License-Identifier: Apache-2.0
+
+/** <!-------------------------------------------------------------------------->
+*
+*   @file test_hsilApi.cpp
+*
+*   @brief Layer 2 HSIL API tests using a stub DDS vtable.
+*
+*   @author
+*       dSPACE SE & Co. KG
+*
+*   @description
+*       Tests hsil.cpp argument validation, error propagation, subscriber
+*       dispatch, publisher type enforcement, get-or-create semantics, and
+*       topic type enforcement without requiring live DDS.
+*
+*   <hr><br>
+*<!-------------------------------------------------------------------------->*/
 
 #include <gtest/gtest.h>
 

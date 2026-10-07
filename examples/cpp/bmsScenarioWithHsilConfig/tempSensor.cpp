@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 dSPACE SE & Co. KG
+// SPDX-License-Identifier: Apache-2.0
+
 /** <!-------------------------------------------------------------------------->
 *
 *   @file tempSensor.cpp
@@ -11,9 +14,6 @@
 *       Temperature sensor simulation that publishes a 4-element float32 array 
 *       (battery.cell_temps) every 10 ms.
 *       Interactive: type "o" (over) or "n" (normal) on stdin to change values.
-*
-*   @copyright
-*       Copyright 2026, dSPACE SE & Co. KG. All rights reserved.
 *
 *   <hr><br>
 *<!-------------------------------------------------------------------------->*/

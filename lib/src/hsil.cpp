@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 dSPACE SE & Co. KG
+// SPDX-License-Identifier: Apache-2.0
+
 /** <!-------------------------------------------------------------------------->
 *
 *   @file hsil.cpp
@@ -11,9 +14,6 @@
 *       Implements all functions declared in hsil.h. Acts as the bridge between
 *       the public C API and the internal DDS abstraction layer (HsilDdsOps).
 *       Manages session lifetime, subscriber dispatch, and config-mode setup.
-*
-*   @copyright
-*       Copyright 2026, dSPACE SE & Co. KG. All rights reserved.
 *
 *   <hr><br>
 *<!-------------------------------------------------------------------------->*/

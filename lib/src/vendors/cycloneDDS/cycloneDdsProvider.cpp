@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 dSPACE SE & Co. KG
+// SPDX-License-Identifier: Apache-2.0
+
 /** <!-------------------------------------------------------------------------->
 *
 *   @file cycloneDdsProvider.cpp
@@ -13,9 +16,6 @@
 *       StreamingData types generated from the HSIL CoSim IDL by idlc. Each
 *       reader uses a data-available listener to deliver samples asynchronously
 *       to the callbacks registered in the HSIL session.
-*
-*   @copyright
-*       Copyright 2026, dSPACE SE & Co. KG. All rights reserved.
 *
 *   <hr><br>
 *<!-------------------------------------------------------------------------->*/

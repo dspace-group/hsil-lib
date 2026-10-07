@@ -1,7 +1,23 @@
-#pragma once
+// SPDX-FileCopyrightText: 2026 dSPACE SE & Co. KG
+// SPDX-License-Identifier: Apache-2.0
 
-// Shared header included by stub_dds_ops.cpp and test_hsilApi.cpp.
-// Declares the global configuration struct that controls stub behaviour.
+/** <!-------------------------------------------------------------------------->
+*
+*   @file stub_dds_ops.h
+*
+*   @brief Shared configuration for the DDS test stub.
+*
+*   @author
+*       dSPACE SE & Co. KG
+*
+*   @description
+*       Declares the global configuration structure used by stub_dds_ops.cpp
+*       and test_hsilApi.cpp to control stub behavior and inspect call counts.
+*
+*   <hr><br>
+*<!-------------------------------------------------------------------------->*/
+
+#pragma once
 
 #include <hsil/hsil.h>
 

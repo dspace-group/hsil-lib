@@ -1,9 +1,21 @@
-// -------------------------------------------------------------------------- //
-// Layer 1 – Config parser tests
-//
-// Tests parseDataType() and parseSimulationConfig() with no DDS dependency.
-// All test fixtures live in config/fixtures/.
-// -------------------------------------------------------------------------- //
+// SPDX-FileCopyrightText: 2026 dSPACE SE & Co. KG
+// SPDX-License-Identifier: Apache-2.0
+
+/** <!-------------------------------------------------------------------------->
+*
+*   @file test_hsilConfig.cpp
+*
+*   @brief Layer 1 HSIL configuration parser tests.
+*
+*   @author
+*       dSPACE SE & Co. KG
+*
+*   @description
+*       Tests parseDataType() and parseSimulationConfig() without a DDS
+*       dependency. Test fixtures are stored in config/fixtures/.
+*
+*   <hr><br>
+*<!-------------------------------------------------------------------------->*/
 
 #include <gtest/gtest.h>
 

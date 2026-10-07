@@ -103,4 +103,15 @@ For full details, please refer the documentation from sections mention below:
 
 ## License
 
-Copyright 2026 dSPACE SE & Co. KG. Licensed under the [Apache License 2.0](LICENSE).
+Copyright 2026 dSPACE SE & Co. KG
+
+Licensed under the Apache License, Version 2.0 (the "License"); you must not use
+this software except in compliance with the License. This software is not fully
+developed or tested. It is distributed free of charge and without any
+consideration. The software is provided "as is" in the hope that it may be
+useful to other users, but without any warranty of any kind, either express or
+implied. See the License for the specific language governing permissions and
+limitations under the License.
+
+The License is available in [LICENSE](LICENSE). This notice is also included in
+[NOTICE](NOTICE).

@@ -1,13 +1,23 @@
-// -------------------------------------------------------------------------- //
-// Layer 2 – DDS stub (linker-seam)
-//
-// Provides a minimal hsil_getDdsOps() implementation that replaces the real
-// CycloneDDS backend at link time. No DDS daemon or network is needed.
-//
-// Design:
-//   - g_stubCfg controls behaviour (fail modes, counters).
-//   - Reset it in each test's SetUp() via StubDdsCfg::reset().
-// -------------------------------------------------------------------------- //
+// SPDX-FileCopyrightText: 2026 dSPACE SE & Co. KG
+// SPDX-License-Identifier: Apache-2.0
+
+/** <!-------------------------------------------------------------------------->
+*
+*   @file stub_dds_ops.cpp
+*
+*   @brief Stub DDS vtable implementation for HSIL API tests.
+*
+*   @author
+*       dSPACE SE & Co. KG
+*
+*   @description
+*       Provides a minimal hsil_getDdsOps() implementation that replaces the
+*       real CycloneDDS backend at link time. g_stubCfg controls failure modes
+*       and call counters and is reset before each test. No DDS daemon or
+*       network is needed.
+*
+*   <hr><br>
+*<!-------------------------------------------------------------------------->*/
 
 #include "ddsAbstraction.h"
 #include "stub_dds_ops.h"

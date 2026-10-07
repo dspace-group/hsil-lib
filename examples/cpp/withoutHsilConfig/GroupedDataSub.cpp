@@ -1,3 +1,6 @@
+// SPDX-FileCopyrightText: 2026 dSPACE SE & Co. KG
+// SPDX-License-Identifier: Apache-2.0
+
 /** <!-------------------------------------------------------------------------->
 *
 *   @file GroupedDataSub.cpp
@@ -7,8 +10,9 @@
 *   @author
 *       dSPACE SE & Co. KG
 *
-*   @copyright
-*       Copyright 2026, dSPACE SE & Co. KG. All rights reserved.
+*   @description
+*       Subscribes to GroupedData samples on a topic and displays the received
+*       payload without using an HSIL JSON configuration file.
 *
 *   <hr><br>
 *<!-------------------------------------------------------------------------->*/

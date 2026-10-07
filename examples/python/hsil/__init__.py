@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2026 dSPACE SE & Co. KG
+# SPDX-License-Identifier: Apache-2.0
+
 """ <!-------------------------------------------------------------------------->
 *
 *   @file __init__.py
@@ -12,9 +15,6 @@
 *       Exposes a Session class with subscribe callbacks for both 
 *       GroupedData and StreamingData topics.
 *       The shared library must be built before importing this package.
-*
-*   @copyright
-*       Copyright 2026, dSPACE SE & Co. KG. All rights reserved.
 *
 *   <hr><br>
 *<!-------------------------------------------------------------------------->"""
